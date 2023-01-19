@@ -1,19 +1,16 @@
 #include<stdio.h>
 int main() {
-	int N,i,sum;
-	int arr[100];
-	scanf("%d", &N);
-	for (i = 0; i < N; i++) {
-		scanf("%d", &sum);
-		arr[i] = sum;
-		
-	}
-	int a,count = 0;
-	scanf("%d", &a);
-	for (i = 0; i < N; i++) {
-		if (arr[i] == a) {
-			count++;
-		}
-	}
-	printf("%d", count);
+	int a[100], n;
+	scanf("%d", &n);
+	long long sum(int *a, int n);
+	return 0;
 }
+
+long long sum(int* a, int n) {
+	long long ans = 0;
+	for (int i = 0; i < n; i++) {
+		ans += a[i];
+	}
+	return ans;
+}
+
