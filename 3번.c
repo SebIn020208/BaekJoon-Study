@@ -1,9 +1,14 @@
 #include<stdio.h>
 int main() {
-	int n,j=0;
-	scanf("%d", &n);
-	for (int i = 1; i <= n; i++) {
-		j+=i;
+	int N, max=-100000, min=100000;
+	int num[1000000];
+	scanf("%d", &N);
+	for (int i = 0; i < N; i++) {
+		scanf("%d", &num[i]);
+		if (num[i] > max)
+			max = num[i];
+		if (num[i] < min)
+			min = num[i];
 	}
-	printf("%d", j);
+	printf("%d %d",min, max);
 }

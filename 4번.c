@@ -1,14 +1,13 @@
 #include<stdio.h>
 int main() {
-	int x, n, a, b;
-	scanf("%d %d", &x,&n);
-	for (int i = 0; i < n; i++) {
-		scanf("%d %d", &a, &b);
-		x = x - a * b;
+	int N[9],max=-1,sum=0,i;
+	for (i = 0; i <= 8; i++) {
+		scanf("%d", &N[i]);
+		if (N[i] > max) {
+			max = N[i];
+			sum = i;
+		}
 	}
-	if (x == 0) {
-		printf("Yes");
-	}
-	else
-		printf("No");
+	printf("%d\n", max);
+	printf("%d", sum+1);
 }
